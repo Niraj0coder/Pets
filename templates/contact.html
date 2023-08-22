@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %} Contact {% endblock title %}
+{% block body %}
+ <div > 
+    <img style="height: 125vh;" class="cimage"src="/static/contact.jpg">
+</div>
+
+    <!-- ======= Contact Section ======= -->
+    <section  id="contact" class="contact">
+        <div style="margin-top: -38px;" class="container">
+  
+  
+          <div class="row" >
+  
+            <div class="col-lg-5 d-flex align-items-stretch">
+              <div class="info">
+                <div class="address">
+                 
+                  <h4>Location:</h4>
+                  <p>Gummidipoondi | chennai</p>
+                </div>
+  
+                <div class="email">
+                  
+                  <h4>Email:</h4>
+                  <p>nirajkumar13500@gmail.com</p>
+                </div>
+  
+                <div class="phone">
+                 
+                  <h4>Call:</h4>
+                  <p>7550300724</p>
+                </div>
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1855.3911572622421!2d80.12483717981593!3d13.410632396584544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d81b917bba223%3A0xeb1a85c0cbe594c1!2s72%2C%20Kattu%20Kolli%20St%2C%20Kottai%20Karai%2C%20Gummidipoondi%2C%20Tamil%20Nadu%20601205!5e0!3m2!1sen!2sin!4v1692456767204!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              </div>
+  
+            </div>
+  
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+              
+              
+              <form action="/contact" method="POST" class="php-email-form">
+                
+                {% csrf_token %}
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control"  required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="name">Email</label>
+                    <input type="email" class="form-control" name="email"  required>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                      <label for="name">Phone</label>
+                      <input type="text" name="phone" class="form-control"  required>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="name">Breed</label>
+                      <input type="text" class="form-control" name="breed"  required>
+                    </div>
+                  </div>
+                <div class="form-group">
+                  <label for="name">Address</label>
+                  <input type="text" class="form-control" name="city" required>
+                </div>
+               
+                <div class="form-group">
+                  <label for="name">Message</label>
+                  <textarea class="form-control" name="desc" rows="5" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+
+
+{% endblock body %}
