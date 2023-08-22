@@ -1,4 +1,2 @@
-.venv/
-django_project/__pycache__/
-pages/__pycache__/
-pages/migration/__pycaclhe__/
+# created by virtualenv automatically
+*
